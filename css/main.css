@@ -49,6 +49,7 @@ body, html {
     overflow: hidden;
     position: relative;
     cursor: pointer;
+    transition: transform 0.5s, box-shadow 0.5s;
 }
 
 .slider__img {
@@ -72,4 +73,11 @@ body, html {
 
 .slider_bg .slider__item {
     max-height: 100vh;
+}
+
+.slider__item.opened {
+    z-index: 2;
+    transform: rotate(-15deg) scale(1.2);
+    box-shadow: rgb(0 0 0 / .75) 0 0 0 10000px;
+
 }
