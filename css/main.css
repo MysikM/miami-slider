@@ -41,14 +41,23 @@ body, html {
 
 .slider__wrapper {
     transition: var(--transition);
+    will-change: transform;
 }
 
 .slider__item {
     min-height: 75vh;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
 }
 
 .slider__img {
-    width: 100%;
+    width: 300%;
     height: 100%;
     background-size: cover;
+    position: absolute;
+    left: -100%;
+    transition: var(--transition) !important;
+    will-change: transform;
+
 }
